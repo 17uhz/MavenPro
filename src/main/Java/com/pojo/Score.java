@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
  */
 //@Component
 public class Score {
+
     private String id;
     private String sno;
     private String name;
