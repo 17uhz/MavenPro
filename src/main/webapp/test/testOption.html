@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>主页</h1>
+
+<!--<button onclick="bitMe()">Click Me</button>-->
+
+<td id="add-answer-input">
+    <input class="input-question" type="radio" name="answer-select" value="a"/>A
+    <input class="input-question" type="radio" name="answer-select" value="b"/>B
+    <input class="input-question" type="radio" name="answer-select" value="c"/>C
+    <input class="input-question" type="radio" name="answer-select" value="d"/>D
+</td>
+
+<select name="" id="select-classify">
+                            <option value="test1">text1</option>
+                            <option value="test2">text2</option>
+                            <option value="test3">text3</option>
+                            <option value="test4">text4</option>
+                            <option value="test5">text5</option>
+                            <option value="test6">text6</option>
+
+</select>
+</body>
+<script src="../js/jquery-3.5.1.js"></script>
+<script>
+    // function bitMe(){
+    //     let JsonDate = {};
+    //     JsonDate.mark="I'm coming!!!"
+    //     $.ajax({
+    //         url:"http://localhost:8080/MavenPro/scoreInfo",
+    //         type:"post",
+    //         data:JsonDate,
+    //         // contentType:"application/json",
+    //         dataType:"json",
+    //         success:function (result){
+    //             console.log(result);
+    //         }
+    //     })
+    // }
+
+    $(function (){
+        let radio = $("input:radio");
+        for (let i = 0; i < radio.length; i++) {
+            if (radio.eq(i).val()=="d") {
+                // radio.eq(i).prop("checked")
+                radio.get(i).checked=true;
+                // jsondata.a_answer = radio.eq(i).val();
+            }
+        }
+        let test="test4"
+        let selectOp = $("#select-classify option");
+        for (let i=0;i<selectOp.length;i++){
+            console.log(selectOp.eq(i).val())
+            if (selectOp.eq(i).val()==test){
+                selectOp.get(i).selected=true;
+            }
+        }
+
+    })
+
+
+</script>
+</html>

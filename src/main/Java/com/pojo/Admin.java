@@ -6,4 +6,6 @@ package com.pojo;
  * Description:<描述>
  */
 public class Admin {
+
+
 }
